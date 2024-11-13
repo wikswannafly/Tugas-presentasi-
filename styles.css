@@ -9,7 +9,7 @@
   33% { border-color: rgb(0, 255, 0); }
   66% { border-color: rgb(0, 0, 255); }
   100% { border-color: rgb(255, 0, 0); }
-}
+
 /* Ubah warna background halaman dan teks */
 body {
   background-color: #333; /* abu-abu gelap */
@@ -24,4 +24,5 @@ body {
 /* Pastikan header juga putih */
 h1, h2, p, ul, li {
   color: white;
+}
 }
