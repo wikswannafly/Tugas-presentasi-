@@ -14,7 +14,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #333; /* Abu-abu gelap */
+      background-image: url('images/background.jpg'); /* Path menuju gambar background */
+      background-size: cover;   /* Gambar menutupi seluruh halaman */
+      background-position: center center; /* Gambar diposisikan di tengah */
+      background-attachment: fixed; /* Agar gambar tetap saat scroll */
       color: white; /* Teks putih */
     }
 
@@ -22,9 +25,10 @@
     .container {
       max-width: 800px;
       padding: 20px;
-      background-color: #444; /* Abu-abu lebih terang */
+      background-color: rgba(68, 68, 68, 0.7); /* Abu-abu lebih terang dengan transparansi */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 8px; /* Untuk memperhalus sudut kontainer */
+      margin: 20px;
     }
 
     /* Style untuk header */
@@ -104,7 +108,7 @@
     </div>
 
     <footer>
-      <p>©: "semua pasti ada jalannya, tapi kalo jalannya rusak tetap salahkan kepala daerah".</p>
+      <p>©:semua pasti ada jalannya, tapi kalo jalannya rusak tetap salahkan kepala daerah.</p>
     </footer>
   </div>
 
