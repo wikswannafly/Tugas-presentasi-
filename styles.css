@@ -1,5 +1,11 @@
-/* Style dasar untuk seluruh halaman */
 body {
+  background-image: url 'background.jpg'; /* Ganti dengan path gambar Anda */
+  background-size: cover; /* Membuat gambar menutupi seluruh layar */
+  background-position: center center; /* Menjaga gambar tetap terpusat */
+  background-attachment: fixed; /* Agar background tetap saat scroll */
+}
+/* Style dasar untuk seluruh halaman */
+{
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
