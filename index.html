@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi Kelompok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Halaman Pertama -->
+    <div id="page1" class="page">
+        <header>
+            <h1>TUGAS PRESENTASI TEXT DISCUSSION BAHASA INGGRIS</h1>
+        </header>
+        
+        <section>
+            <h2>Nama Anggota Kelompok</h2>
+            <ul>
+                <li>1. Dwi Teguh Pamuji</li>
+                <li>2. M.Zuka Alvinawa</li>
+                <li>3. Farel Ananda Valen</li>
+                <li>4. Rifki Kurnia Ardana</li>
+            </ul>
+            <button class="rgb-button" onclick="goToPage2()">Next Page</button>
+        </section>
+        
+        <section>
+            <h2>Deskripsi</h2>
+            <p>Isi deskripsi di sini...</p>
+        </section>
+        
+        <footer>
+            <p>&copy; Semua pasti ada jalannya, tapi kalo jalannya rusak tetap salahkan kepala daerah.</p>
+        </footer>
+    </div>
+
+    <!-- Halaman Kedua -->
+    <div id="page2" class="page" style="display:none;">
+        <header>
+            <h1>Dibawah Ini Adalah File Yang Berisikan Tugas Yang Telah Kami Buat</h1>
+        </header>
+
+        <section>
+            <button class="rgb-button" onclick="goToPage1()">Kembali ke Halaman Pertama</button>
+            <button class="rgb-button" onclick="window.location.href='#'">Link Tugas</button>
+        </section>
+        
+        <section style="margin-top: 3rem; text-align: justify;">
+            <p>Sekian Dari Kami (Dwi Teguh Pamuji, M.Zuka Alvinawa, Farel Ananda Valen, Rifki Kurnia Ardana). Apabila Ada Kesalahan Kami Mohon Maaf Karena Manusia Tidak Pernah Luput Dari Kesalahannya, Terimakasih Wassalamu'alaikum warahmatullahi wabarakatuh</p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
