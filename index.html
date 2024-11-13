@@ -24,17 +24,24 @@
       padding: 20px;
       background-color: #444; /* Abu-abu lebih terang */
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px; /* Untuk memperhalus sudut kontainer */
     }
 
     /* Style untuk header */
-    h1, h2, p, ul, li {
-      color: white; /* Teks putih */
+    h1, h2 {
+      color: white;
+      padding: 10px;
+      border-bottom: 2px solid white; /* Border bawah pada header */
+      margin-bottom: 10px; /* Memberikan jarak antara header dan konten */
+      outline: 2px solid white; /* Outline putih pada header */
+      border-radius: 5px; /* Membuat sudut header sedikit melengkung */
     }
 
     /* Style untuk list nama */
     ul {
       list-style: none;
       padding: 0;
+      margin: 10px 0;
     }
 
     li {
@@ -67,6 +74,14 @@
       text-align: justify;
       margin-top: 40px;
     }
+
+    /* Style untuk konten (isi) */
+    .content {
+      padding: 15px;
+      border: 2px solid white; /* Border putih pada konten */
+      border-radius: 8px; /* Sudut konten melengkung */
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
@@ -82,8 +97,12 @@
       <li>4. Rifki Kurnia Ardana</li>
     </ul>
     <button class="button" onclick="goToPage2()">Next Page</button>
+
     <h2>Deskripsi</h2>
-    <p><!-- Isi deskripsi di sini --></p>
+    <div class="content">
+      <p><!-- Isi deskripsi di sini --></p>
+    </div>
+
     <footer>
       <p>Copyright: "semua pasti ada jalannya, tapi kalo jalannya rusak tetap salahkan kepala daerah".</p>
     </footer>
