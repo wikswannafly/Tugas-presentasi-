@@ -1,55 +1,118 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentasi Kelompok</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentasi Kelompok</title>
+  <style>
+    /* Style dasar untuk seluruh halaman */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+    }
+
+    /* Style untuk kontainer */
+    .container {
+      max-width: 800px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style untuk header */
+    h1 {
+      color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+    }
+
+    /* Style untuk list nama */
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 5px 0;
+    }
+
+    /* Style untuk tombol dengan animasi outline RGB */
+    .button {
+      margin: 20px 0;
+      padding: 10px 20px;
+      background-color: transparent;
+      border: 2px solid;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      animation: rgbOutline 2s infinite;
+    }
+
+    /* Animasi outline RGB */
+    @keyframes rgbOutline {
+      0% { border-color: rgb(255, 0, 0); }
+      33% { border-color: rgb(0, 255, 0); }
+      66% { border-color: rgb(0, 0, 255); }
+      100% { border-color: rgb(255, 0, 0); }
+    }
+
+    /* Style untuk teks footer */
+    .footer-text {
+      text-align: justify;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-    <!-- Halaman Pertama -->
-    <div id="page1" class="page">
-        <header>
-            <h1>TUGAS PRESENTASI TEXT DISCUSSION BAHASA INGGRIS</h1>
-        </header>
-        
-        <section>
-            <h2>Nama Anggota Kelompok</h2>
-            <ul>
-                <li>1. Dwi Teguh Pamuji</li>
-                <li>2. M.Zuka Alvinawa</li>
-                <li>3. Farel Ananda Valen</li>
-                <li>4. Rifki Kurnia Ardana</li>
-            </ul>
-            <button class="rgb-button" onclick="goToPage2()">Next Page</button>
-        </section>
-        
-        <section>
-            <h2>Deskripsi</h2>
-            <p>Isi deskripsi di sini...</p>
-        </section>
-        
-        <footer>
-            <p>&copy; Semua pasti ada jalannya, tapi kalo jalannya rusak tetap salahkan kepala daerah.</p>
-        </footer>
-    </div>
 
-    <!-- Halaman Kedua -->
-    <div id="page2" class="page" style="display:none;">
-        <header>
-            <h1>Dibawah Ini Adalah File Yang Berisikan Tugas Yang Telah Kami Buat</h1>
-        </header>
+  <!-- Halaman Pertama -->
+  <div class="container" id="page1">
+    <h1>TUGAS PRESENTASI TEXT DISCUSSION BAHASA INGGRIS</h1>
+    <h2>Nama Anggota Kelompok</h2>
+    <ul>
+      <li>1. Dwi Teguh Pamuji</li>
+      <li>2. M.Zuka Alvinawa</li>
+      <li>3. Farel Ananda Valen</li>
+      <li>4. Rifki Kurnia Ardana</li>
+    </ul>
+    <button class="button" onclick="goToPage2()">Next Page</button>
+    <h2>Deskripsi</h2>
+    <p><!-- Isi deskripsi di sini --></p>
+    <footer>
+      <p>Copyright: "semua pasti ada jalannya, tapi kalo jalannya rusak tetap salahkan kepala daerah".</p>
+    </footer>
+  </div>
 
-        <section>
-            <button class="rgb-button" onclick="goToPage1()">Kembali ke Halaman Pertama</button>
-            <button class="rgb-button" onclick="window.location.href='#'">Link Tugas</button>
-        </section>
-        
-        <section style="margin-top: 3rem; text-align: justify;">
-            <p>Sekian Dari Kami (Dwi Teguh Pamuji, M.Zuka Alvinawa, Farel Ananda Valen, Rifki Kurnia Ardana). Apabila Ada Kesalahan Kami Mohon Maaf Karena Manusia Tidak Pernah Luput Dari Kesalahannya, Terimakasih Wassalamu'alaikum warahmatullahi wabarakatuh</p>
-        </section>
-    </div>
+  <!-- Halaman Kedua -->
+  <div class="container" id="page2" style="display: none;">
+    <h1>Dibawah Ini Adalah File Yang Berisikan Tugas Yang Telah Kami Buat</h1>
+    <button class="button" onclick="openLink()">Lihat Tugas</button>
+    <br><br><br>
+    <p class="footer-text">Sekian Dari Kami (Dwi Teguh Pamuji, M.Zuka Alvinawa, Farel Ananda Valen, Rifki Kurnia Ardana) Apabila Ada Kesalahan Kami Mohon Maaf Karena Manusia Tidak Pernah Luput Dari Kesalahannya, Terimakasih Wassalamu'alaikum warahmatullahi wabarakatuh</p>
+    <button class="button" onclick="goToPage1()">Kembali ke Halaman Pertama</button>
+  </div>
 
-    <script src="script.js"></script>
+  <script>
+    // Fungsi untuk navigasi halaman
+    function goToPage2() {
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+    }
+
+    function goToPage1() {
+      document.getElementById('page1').style.display = 'block';
+      document.getElementById('page2').style.display = 'none';
+    }
+
+    function openLink() {
+      window.open('#', '_blank'); // Ganti '#' dengan URL file tugas yang sebenarnya
+    }
+  </script>
 </body>
-</html>
+                                                                               </html>
+                                                                               
