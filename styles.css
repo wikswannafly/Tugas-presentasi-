@@ -1,76 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+/* Tambahkan animasi RGB pada outline tombol */
+.button {
+  animation: rgbOutline 2s infinite;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.page {
-    width: 80%;
-    max-width: 600px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #fff;
-}
-
-header h1 {
-    color: #333;
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-li {
-    margin: 5px 0;
-}
-
-p {
-    font-size: 0.9em;
-    color: #555;
-}
-
-footer p {
-    font-size: 0.8em;
-    color: #777;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.rgb-button {
-    display: inline-block;
-    padding: 10px 15px;
-    border: 2px solid;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    animation: glowing 1.5s infinite;
-}
-
-@keyframes glowing {
-    0% { border-color: rgb(255, 0, 0); }
-    50% { border-color: rgb(0, 255, 0); }
-    100% { border-color: rgb(0, 0, 255); }
+/* Definisi @keyframes untuk perubahan warna outline RGB */
+@keyframes rgbOutline {
+  0% { border-color: rgb(255, 0, 0); }
+  33% { border-color: rgb(0, 255, 0); }
+  66% { border-color: rgb(0, 0, 255); }
+  100% { border-color: rgb(255, 0, 0); }
 }
