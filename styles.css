@@ -1,5 +1,5 @@
 body {
-  background-image: url background.jpg; /* Ganti dengan path gambar Anda */
+  background-image: url ('background.jpg'); /* Ganti dengan path gambar Anda */
   background-size: cover; /* Membuat gambar menutupi seluruh layar */
   background-position: center center; /* Menjaga gambar tetap terpusat */
   background-attachment: fixed; /* Agar background tetap saat scroll */
